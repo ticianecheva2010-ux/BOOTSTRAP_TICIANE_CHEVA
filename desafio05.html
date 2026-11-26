@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05 - COVEN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5eff8;
+        }
+
+        .navbar {
+            background: black !important;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #c9a7d8 !important;
+        }
+
+        h1,
+        h2 {
+            color: #5e3475;
+        }
+
+        .card {
+            border: 1px solid #b58ac7;
+        }
+
+        .btn-coven {
+            background: #5e3475;
+            color: white;
+        }
+
+        .btn-coven:hover {
+            background: #452457;
+            color: white;
+        }
+
+        .table th {
+            background: #5e3475;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">COVEN</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio01.html">Desafio 01</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio02.html">Desafio 02</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio03.html">Desafio 03</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio04.html">Desafio 04</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio05.html">Desafio 05</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+
+        <h1 class="text-center">Painel COVEN</h1>
+        <p class="text-center text-muted">Controle de pedidos e produção</p>
+
+        <div class="alert alert-warning">
+            Existem pedidos aguardando confirmação.
+        </div>
+
+        <div class="row g-3 mb-4">
+
+            <div class="col-md-4">
+                <div class="card p-3 text-center">
+                    <h5>Vendas</h5>
+                    <h3>R$ 1.248,70</h3>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3 text-center">
+                    <h5>Pedidos</h5>
+                    <h3 id="total">27</h3>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3 text-center">
+                    <h5>Produção</h5>
+                    <h3>6</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Pedidos recentes</h2>
+
+            <button class="btn btn-coven" data-bs-toggle="modal" data-bs-target="#modal">
+                + Pedido
+            </button>
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover">
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Cliente</th>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="pedidos">
+
+                    <tr>
+                        <td>#001</td>
+                        <td>Ana</td>
+                        <td>Vela de Lavanda</td>
+                        <td>R$36,00</td>
+                        <td>
+                            <span class="badge text-bg-warning">Produção</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#002</td>
+                        <td>Mariana</td>
+                        <td>Vela de Rosas</td>
+                        <td>R$44,00</td>
+                        <td>
+                            <span class="badge text-bg-success">Concluído</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#003</td>
+                        <td>Júlia</td>
+                        <td>Vela de Canela</td>
+                        <td>R$60,00</td>
+                        <td>
+                            <span class="badge text-bg-secondary">Aguardando</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#004</td>
+                        <td>Beatriz</td>
+                        <td>Vela de Café</td>
+                        <td>R$42,00</td>
+                        <td>
+                            <span class="badge text-bg-warning">Produção</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#005</td>
+                        <td>Laura</td>
+                        <td>Vela de Ervas</td>
+                        <td>R$24,00</td>
+                        <td>
+                            <span class="badge text-bg-success">Concluído</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">Novo pedido</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="form">
+
+                        <div class="mb-3">
+                            <label class="form-label">Cliente</label>
+                            <input type="text" id="cliente" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Produto</label>
+
+                            <select id="produto" class="form-select" required>
+                                <option value="">Escolha uma vela</option>
+                                <option>Vela de Lavanda</option>
+                                <option>Vela de Rosas</option>
+                                <option>Vela de Canela</option>
+                                <option>Vela de Café</option>
+                                <option>Vela de Ervas</option>
+                                <option>Vela Coven</option>
+                            </select>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">Valor</label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">R$</span>
+                                <input type="number" id="valor" class="form-control" step="0.01" required>
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-coven w-100">
+                            Cadastrar pedido
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="text-center py-4">
+        <small>COVEN • Velas artesanais • Campo Largo - PR</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let numero = 6;
+
+        document.getElementById("form").onsubmit = function (e) {
+
+            e.preventDefault();
+
+            let cliente = document.getElementById("cliente").value;
+            let produto = document.getElementById("produto").value;
+            let valor = document.getElementById("valor").value;
+
+            document.getElementById("pedidos").innerHTML += `
+      <tr>
+        <td>#00${numero}</td>
+        <td>${cliente}</td>
+        <td>${produto}</td>
+        <td>R$${valor}</td>
+        <td>
+          <span class="badge text-bg-warning">Produção</span>
+        </td>
+      </tr>
+    `;
+
+            numero++;
+
+            document.getElementById("total").innerText = numero + 21;
+
+            this.reset();
+
+            bootstrap.Modal.getInstance(
+                document.getElementById("modal")
+            ).hide();
+        };
+    </script>
+
+</body>
+
+</html>

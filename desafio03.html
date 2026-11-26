@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 03 - COVEN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #f4f0f5;
+        }
+
+        .navbar {
+            background-color: #17131b !important;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #17131b, #3d1f4b, #19352d);
+            color: white;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            color: #ddd5df;
+        }
+
+        .btn-coven {
+            background-color: #8b6aa8;
+            color: white;
+            border: none;
+        }
+
+        .btn-coven:hover {
+            background-color: #a582c4;
+            color: white;
+        }
+
+        .imagem-hero {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .titulo {
+            color: #4b235d;
+        }
+
+        .diferencial {
+            border: 1px solid #d8c9dc;
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        .icone {
+            font-size: 35px;
+        }
+
+        .rodape {
+            background-color: #17131b;
+            color: #aaa;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            COVEN
+        </a>
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPortifolio"
+            aria-controls="menuPortifolio"
+            aria-expanded="false"
+            aria-label="Alternar navegação">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menuPortifolio">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="desafio01.html">
+                        Desafio 01
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="desafio02.html">
+                        Desafio 02
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="desafio03.html">
+                        Desafio 03
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="desafio04.html">
+                        Desafio 04
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="desafio05.html">
+                        Desafio 05
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-12 col-lg-6">
+
+                <span class="badge bg-light text-dark mb-3">
+                    EXPERIÊNCIA COVEN
+                </span>
+
+                <h1 class="fw-bold">
+                    ONDE A LUZ
+                    <br>
+                    ENCONTRA A MAGIA
+                </h1>
+
+                <p class="lead mt-3">
+                    Uma experiência criada para quem gosta de mistério,
+                    criatividade e pequenos detalhes que transformam o ambiente.
+                </p>
+
+                <a href="#inscricao" class="btn btn-coven btn-lg mt-3">
+                    Quero participar
+                </a>
+
+            </div>
+
+
+            <div class="col-12 col-lg-6">
+
+                <img
+                    src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=80"
+                    class="imagem-hero"
+                    alt="Ambiente com velas e decoração">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DIFERENCIAIS -->
+
+<section class="container my-5">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold titulo">
+            Por que conhecer a COVEN?
+        </h2>
+
+        <p class="text-muted">
+            Uma experiência diferente em cada detalhe.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+
+        <!-- DIFERENCIAL 1 -->
+
+        <div class="col-12 col-md-4">
+
+            <div class="diferencial h-100 p-4 text-center shadow-sm">
+
+                <div class="icone">
+                    🔮
+                </div>
+
+                <h4 class="fw-bold mt-3">
+                    Atmosfera única
+                </h4>
+
+                <p class="text-muted">
+                    Um ambiente inspirado no universo mágico,
+                    com detalhes pensados para criar uma experiência diferente.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIFERENCIAL 2 -->
+
+        <div class="col-12 col-md-4">
+
+            <div class="diferencial h-100 p-4 text-center shadow-sm">
+
+                <div class="icone">
+                    🕯️
+                </div>
+
+                <h4 class="fw-bold mt-3">
+                    Feito à mão
+                </h4>
+
+                <p class="text-muted">
+                    Produtos artesanais feitos com cuidado,
+                    valorizando aromas, detalhes e criatividade.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIFERENCIAL 3 -->
+
+        <div class="col-12 col-md-4">
+
+            <div class="diferencial h-100 p-4 text-center shadow-sm">
+
+                <div class="icone">
+                    🌙
+                </div>
+
+                <h4 class="fw-bold mt-3">
+                    Experiência especial
+                </h4>
+
+                <p class="text-muted">
+                    Uma proposta pensada para quem procura
+                    algo fora do comum e cheio de personalidade.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- INSCRIÇÃO -->
+
+<section id="inscricao" class="container my-5">
+
+    <div class="p-5 text-center rounded-4"
+        style="background-color: #241b29; color: white;">
+
+        <h2 class="fw-bold">
+            Faça parte da experiência COVEN
+        </h2>
+
+        <p class="mb-4">
+            Venha conhecer um espaço onde cada detalhe tem seu próprio encanto.
+        </p>
+
+        <button class="btn btn-coven btn-lg"
+            onclick="alert('Inscrição realizada com sucesso!')">
+
+            Inscrever-se
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- RODAPÉ -->
+
+<footer class="rodape text-center py-3">
+
+    <div class="container">
+
+        <small>
+            COVEN • Velas artesanais • Campo Largo - PR
+        </small>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

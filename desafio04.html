@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio 04 - COVEN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f0f5;
+        }
+
+        .navbar {
+            background-color: #17131b !important;
+        }
+
+        .titulo {
+            color: #4b235d;
+            letter-spacing: 1px;
+        }
+
+        .subtitulo {
+            color: #625966;
+        }
+
+        .formulario {
+            background-color: white;
+            border: 1px solid #d8c9dc;
+            border-radius: 15px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #382d3d;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #8b6aa8;
+            box-shadow: 0 0 0 0.2rem rgba(139, 106, 168, 0.20);
+        }
+
+        .btn-coven {
+            background-color: #4b235d;
+            color: white;
+            border: none;
+        }
+
+        .btn-coven:hover {
+            background-color: #35183f;
+            color: white;
+        }
+
+        .caixa-topo {
+            background: linear-gradient(135deg, #17131b, #3d1f4b, #19352d);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .texto-topo {
+            color: #ddd5df;
+        }
+
+        .rodape {
+            background-color: #17131b;
+            color: #aaa;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                COVEN
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPortifolio"
+                aria-controls="menuPortifolio" aria-expanded="false" aria-label="Alternar navegação">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPortifolio">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio01.html">
+                            Desafio 01
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio02.html">
+                            Desafio 02
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio03.html">
+                            Desafio 03
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="desafio04.html">
+                            Desafio 04
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="desafio05.html">
+                            Desafio 05
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CABEÇALHO -->
+
+    <main class="container my-5">
+
+        <div class="caixa-topo p-4 p-md-5 mb-4 shadow-sm">
+
+            <h1 class="fw-bold">
+                Agendamento COVEN
+            </h1>
+
+            <p class="texto-topo mb-0">
+                Faça seu pedido personalizado de velas e aromas.
+                Preencha os dados abaixo para solicitar seu atendimento.
+            </p>
+
+        </div>
+
+        <!-- FORMULÁRIO -->
+
+        <div class="formulario shadow-sm p-4 p-md-5">
+
+            <form id="formularioCoven">
+
+                <!-- DADOS DO CLIENTE -->
+
+                <h3 class="titulo fw-bold mb-4">
+                    Dados do cliente
+                </h3>
+
+
+                <div class="row g-3">
+
+                    <!-- NOME -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="nome" class="form-label">
+                            Nome completo
+                        </label>
+
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+
+                    </div>
+
+                    <!-- EMAIL -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="email" class="form-label">
+                            E-mail
+                        </label>
+
+                        <input type="email" class="form-control" id="email" placeholder="seuemail@email.com" required>
+
+                    </div>
+
+                    <!-- WHATSAPP -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="telefone" class="form-label">
+                            WhatsApp
+                        </label>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+                                +55
+                            </span>
+
+                            <input type="tel" class="form-control" id="telefone" placeholder="(41) 99999-9999" required>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DATA -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="data" class="form-label">
+                            Data desejada
+                        </label>
+
+                        <input type="date" class="form-control" id="data" required>
+
+                    </div>
+
+                </div>
+
+                <hr class="my-5">
+
+                <!-- PEDIDO -->
+
+                <h3 class="titulo fw-bold mb-4">
+                    Detalhes do pedido
+                </h3>
+
+
+                <div class="row g-3">
+
+                    <!-- TIPO DE VELA -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="produto" class="form-label">
+                            Escolha a vela
+                        </label>
+
+                        <select class="form-select" id="produto" required>
+
+                            <option value="" selected disabled>
+                                Selecione uma opção
+                            </option>
+
+                            <option>
+                                Vela de Lavanda
+                            </option>
+
+                            <option>
+                                Vela de Rosas
+                            </option>
+
+                            <option>
+                                Vela de Canela
+                            </option>
+
+                            <option>
+                                Vela de Café
+                            </option>
+
+                            <option>
+                                Vela de Ervas
+                            </option>
+
+                            <option>
+                                Vela Coven
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- QUANTIDADE -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="quantidade" class="form-label">
+                            Quantidade
+                        </label>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+                                Un.
+                            </span>
+
+                            <input type="number" class="form-control" id="quantidade" min="1" placeholder="Ex: 2"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <!-- VALOR ESTIMADO -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="valor" class="form-label">
+                            Valor estimado
+                        </label>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+                                R$
+                            </span>
+
+                            <input type="number" class="form-control" id="valor" placeholder="0,00">
+
+                        </div>
+
+                    </div>
+
+                    <!-- FORMA DE ENTREGA -->
+
+                    <div class="col-12 col-md-6">
+
+                        <label for="entrega" class="form-label">
+                            Forma de entrega
+                        </label>
+
+                        <select class="form-select" id="entrega" required>
+
+                            <option value="" selected disabled>
+                                Selecione uma opção
+                            </option>
+
+                            <option>
+                                Retirada na loja
+                            </option>
+
+                            <option>
+                                Entrega em Campo Largo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- OBSERVAÇÕES -->
+
+                    <div class="col-12">
+
+                        <label for="observacoes" class="form-label">
+                            Observações do pedido
+                        </label>
+
+                        <textarea class="form-control" id="observacoes" rows="4"
+                            placeholder="Escreva alguma preferência ou observação..."></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- CONFIRMAÇÃO -->
+
+                <div class="form-check mt-4">
+
+                    <input class="form-check-input" type="checkbox" id="confirmacao" required>
+
+                    <label class="form-check-label" for="confirmacao">
+
+                        Confirmo que os dados informados estão corretos.
+
+                    </label>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <div class="text-center mt-4">
+
+                    <button type="submit" class="btn btn-coven btn-lg px-5">
+
+                        Confirmar agendamento
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape text-center py-3">
+
+        <div class="container">
+
+            <small>
+                COVEN • Velas artesanais • Campo Largo - PR
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        document.getElementById("formularioCoven").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            alert("Agendamento realizado com sucesso! Obrigado por escolher a COVEN.");
+
+        });
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
